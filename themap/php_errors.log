@@ -1,0 +1,71 @@
+[09-Dec-2018 22:33:02 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php on line 10
+[09-Dec-2018 22:33:02 UTC] PHP Stack trace:
+[09-Dec-2018 22:33:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:0
+[09-Dec-2018 22:33:02 UTC] PHP   2. include() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:37
+[09-Dec-2018 22:33:02 UTC] PHP   3. displayQuotes() /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php:36
+[09-Dec-2018 22:46:07 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php on line 10
+[09-Dec-2018 22:46:07 UTC] PHP Stack trace:
+[09-Dec-2018 22:46:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:0
+[09-Dec-2018 22:46:07 UTC] PHP   2. include() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:37
+[09-Dec-2018 22:46:07 UTC] PHP   3. displayQuotes() /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php:36
+[09-Dec-2018 22:46:50 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:46:50 UTC] PHP Stack trace:
+[09-Dec-2018 22:46:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:46:50 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:46:55 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:46:55 UTC] PHP Stack trace:
+[09-Dec-2018 22:46:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:46:55 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:46:58 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:46:58 UTC] PHP Stack trace:
+[09-Dec-2018 22:46:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:46:58 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:46:58 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:46:58 UTC] PHP Stack trace:
+[09-Dec-2018 22:46:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:46:58 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:46:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:46:59 UTC] PHP Stack trace:
+[09-Dec-2018 22:46:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:46:59 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:46:59 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:46:59 UTC] PHP Stack trace:
+[09-Dec-2018 22:46:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:46:59 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:48:28 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:48:28 UTC] PHP Stack trace:
+[09-Dec-2018 22:48:28 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:48:28 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:48:29 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:48:29 UTC] PHP Stack trace:
+[09-Dec-2018 22:48:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:48:29 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:48:38 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/project336/themap/mainfiles/users.php on line 25
+[09-Dec-2018 22:48:38 UTC] PHP Stack trace:
+[09-Dec-2018 22:48:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:0
+[09-Dec-2018 22:48:38 UTC] PHP   2. mysqli_fetch_assoc() /home/ubuntu/workspace/project336/themap/mainfiles/users.php:25
+[09-Dec-2018 22:53:40 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php on line 10
+[09-Dec-2018 22:53:40 UTC] PHP Stack trace:
+[09-Dec-2018 22:53:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:0
+[09-Dec-2018 22:53:40 UTC] PHP   2. include() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:37
+[09-Dec-2018 22:53:40 UTC] PHP   3. displayQuotes() /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php:36
+[09-Dec-2018 22:54:38 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php on line 10
+[09-Dec-2018 22:54:38 UTC] PHP Stack trace:
+[09-Dec-2018 22:54:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:0
+[09-Dec-2018 22:54:38 UTC] PHP   2. include() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:37
+[09-Dec-2018 22:54:38 UTC] PHP   3. displayQuotes() /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php:36
+[09-Dec-2018 22:57:16 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php on line 10
+[09-Dec-2018 22:57:16 UTC] PHP Stack trace:
+[09-Dec-2018 22:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:0
+[09-Dec-2018 22:57:16 UTC] PHP   2. include() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:37
+[09-Dec-2018 22:57:16 UTC] PHP   3. displayQuotes() /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php:36
+[09-Dec-2018 22:58:49 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php on line 10
+[09-Dec-2018 22:58:49 UTC] PHP Stack trace:
+[09-Dec-2018 22:58:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:0
+[09-Dec-2018 22:58:49 UTC] PHP   2. include() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:37
+[09-Dec-2018 22:58:49 UTC] PHP   3. displayQuotes() /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php:36
+[09-Dec-2018 23:02:08 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php on line 10
+[09-Dec-2018 23:02:08 UTC] PHP Stack trace:
+[09-Dec-2018 23:02:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:0
+[09-Dec-2018 23:02:08 UTC] PHP   2. include() /home/ubuntu/workspace/project336/themap/mainfiles/home.php:37
+[09-Dec-2018 23:02:08 UTC] PHP   3. displayQuotes() /home/ubuntu/workspace/project336/themap/mainfiles/getquotes.php:36
