@@ -7,11 +7,10 @@
         $dbname = "hogwarts"; 
     } else {
         //running on Heroku
-        
-        $host = "us-cdbr-iron-east-01.cleardb.net";
-        $username = "bc0ae3954df63b";
-        $password = "d545dc63"; //best practice: defined in seperate file that is not commited to GitHub
-        $dbname = "heroku_884ad785636f6f4"; 
+             $host = "us-cdbr-iron-east-01.cleardb.net";
+            $username = "b25a361e451e0d";
+            $password = "59c9239e"; //best practice: defined in seperate file that is not commited to GitHub
+            $dbname = "heroku_7c872a949548485";   
     }
 
 
