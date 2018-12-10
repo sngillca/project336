@@ -1,3 +1,71 @@
+<?php
+
+    include "db.php";
+    $conn = getSQL();
+    $sql = "select * from houses full join housecup"; 
+    $statement = $conn->prepare($sql); 
+    $statement->execute(); 
+    $records = $statement->fetchAll(); 
+    
+    $gpoints;
+    $spoints;
+    $hpoints;
+    $rpoints;
+    
+    $ghist;
+    $shist;
+    $hhist;
+    $rhist;
+    
+    foreach ($records as $record) {
+      if($record["house_name"] == "Gryffindor"){
+        $gpoints= $record["points1"]+$record["points2"];
+        $ghist= $record["wins"];
+      
+      }
+      if($record["cup_id"] == 1){
+        $ghist = $record["wins"];
+        
+      }
+      if($record["house_name"] == "Slytherin"){
+        $spoints= $record["points1"]+$record["points2"];
+        //$shist= $record["wins"];
+      
+      }   
+      
+      if($record["cup_id"] == 2){
+        $shist = $record["wins"];
+        
+      }
+      if($record["house_name"] == "Hufflepuff"){
+        $hhist = $record["wins"];
+        $hpoints = $record["points1"]+$record["points2"];
+        }
+       if($record["cup_id"] == 3){
+        $hhist = $record["wins"];
+        
+      }
+
+      if($record["house_name"] == "Ravenclaw"){
+        $rpoints = $record["points1"]+$record["points2"];
+       
+       
+      }
+       if($record["cup_id"] == 4){
+        $rhist = $record["wins"];
+        
+      }
+
+ 
+      
+      
+    }//foreach
+  
+        
+      
+    
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -56,46 +124,20 @@
           </tr>
           
           <tr>
-            <td>Points:</td>
-            <td>Points:</td>
-            <td>Points:</td>
-            <td>Points:</td>
+            <td>Total Points: <?php echo "<kbd> ".$gpoints."</kbd>"; ?></td>
+            <td>Total Points: <?php echo "<kbd> ".$spoints."</kbd>"; ?></td>
+            <td>Total Points: <?php echo "<kbd> ".$hpoints."</kbd>"; ?></td>
+            <td>Total Points: <?php echo "<kbd> ".$rpoints."</kbd>"; ?></td>
             </tr>
             
             <tr>
-              <td>Total Wins in History:</td>
-              <td>Total Wins in History:</td>
-              <td>Total Wins in History:</td>
-              <td>Total Wins in History:</td>
+              <td>Total Wins in History: <?php echo "<kbd> ".$ghist."</kbd>"; ?></td>
+              <td>Total Wins in History: <?php echo "<kbd> ".$shist."</kbd>"; ?>  </td>
+              <td>Total Wins in History:<?php echo "<kbd> ".$hhist."</kbd>"; ?></td>
+              <td>Total Wins in History: <?php echo "<kbd> ".$rhist."</kbd>"; ?></td>
             </tr>
       </table>
       </kbd>
   </body>
 </html>
 
-<?php
- 
-  include "db.php";
-
-    
-  
-    $conn = getSQL();
-    $sql = "SELECT * from houses right join housecup on houses.name=housecup.wins"; 
-    $statement = $conn->prepare($sql); 
-    $statement->execute(); 
-    $records = $statement->fetchAll(); 
-    
-    $gWins;
-    
-    foreach ($records as $record) {
-      if($record["name"] == $house){
-        echo "<kbd> ".$record["name"]."</kbd><br>";
-      }//if
-    }//foreach
-      
-    
-
-  
-
-
-?>
