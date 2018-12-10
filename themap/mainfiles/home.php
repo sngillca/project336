@@ -10,7 +10,7 @@
          .b {
               border-radius: 65px;
               padding: 20px; 
-              font-size: 3em;
+              
               color:white;
               position: absolute;
               top: 50%;
@@ -19,7 +19,7 @@
 
          }
          .centered {
-             font-size: 3em;
+             font-size: 2em;
              color:white;
              position: absolute;
             top: 50%;
@@ -33,10 +33,15 @@
     <body>
         <?php include "menu.php";?>
         
+<<<<<<< HEAD
     <img class="b" src="/project336/themap/img/maud.gif"  height="650" width="1200"></img>
     <div class="centered"><kbd><?php include "getquotes.php"; ?>
     
     </kbd></div>
+=======
+    <img class="b" src="../img/maud.gif"  height="550" width="1200"></img>
+    <div class="centered"><kbd><?php include "getquotes.php"; ?></kbd></div>
+>>>>>>> 258a8d8c05ba19f899c5b167e36a3c7f53e2e4ed
         <script type="text/javascript" src="./mapmain.js"></script>
 
     </body>
