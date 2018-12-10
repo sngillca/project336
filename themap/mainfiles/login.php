@@ -17,7 +17,7 @@
         <kbd><h1>Alohomora</h1></kbd>
         
         
-        <form method="post" action="hidden.php">
+        <form method="post">
             <kbd>USERNAME:</kbd> <input type="text" id="user"/>
             <kbd>PASSWORD:</kbd> <input type="password" id="pass"/>
             

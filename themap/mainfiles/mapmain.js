@@ -66,13 +66,13 @@ function search(){
                     
                     if(data[a].gender == "male"){
                         html += "<br><h2><em><td><kbd>Wizard: <mark>"+data[a].name+"</mark> Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
-                        var path = "/project336/themap/img/"+a+".jpg";
+                        var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                     }
                     if(data[a].gender == "female"){
                         
                         html += "<br><h2><em><td><kbd>Witch: <mark>"+data[a].name+"</mark> Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
-                        var path = "/project336/themap/img/"+a+".jpg";
+                        var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                      }//end gender
                  } //end names
@@ -83,13 +83,13 @@ function search(){
                         count+=1;
                          if(data[a].gender == "male"){
                         html += "<br><h2><em><td><kbd>Wizard: "+data[a].name+" Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong><mark>"+data[a].house+"</mark></strong></kbd></em></h2></td>";
-                        var path = "/project336/themap/img/"+a+".jpg";
+                        var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                     }
                     if(data[a].gender == "female"){
                         
                         html += "<br><h2><em><td><kbd>Witch:"+data[a].name+" Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong><mark>"+data[a].house+"</mark></strong></kbd></em></h2></td>";
-                        var path = "/project336/themap/img/"+a+".jpg";
+                        var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                      }//end gender
                     } //end house
@@ -101,13 +101,13 @@ function search(){
                         count+=1;
                          if(data[a].gender == "male"){
                         html += "<br><h2><em><td><kbd>Wizard: "+data[a].name+" Patronus:<strong><mark> "+data[a].patronus.toUpperCase()+"</mark></strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
-                        var path = "./img/"+a+".jpg";
+                        var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                     }
                     if(data[a].gender == "female"){
                         
                         html += "<br><h2><em><td><kbd>Witch:"+data[a].name+" Patronus:<strong><mark> "+data[a].patronus.toUpperCase()+"</mark></strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
-                        var path = "./img/"+a+".jpg";
+                        var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                      }//end gender
                     } //end patrnous

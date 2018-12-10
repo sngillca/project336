@@ -33,8 +33,8 @@
     <body>
         <?php include "menu.php";?>
         
-    <img class="b" src="/project336/themap/img/maud.gif"  height="650" width="1200"></img>
-    <div class="centered"><kbd><?php include "getquotes.php"?>
+    <img class="b" src="../img/maud.gif"  height="650" width="1200"></img>
+    <div class="centered"><kbd><?php include "getquotes.php"; ?>
     
     </kbd></div>
         <script type="text/javascript" src="./mapmain.js"></script>
