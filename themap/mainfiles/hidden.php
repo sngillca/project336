@@ -1,3 +1,15 @@
+<?php
+    include 'functions.php';
+    checkLoggedIn(); 
+    
+    session_start(); 
+    
+  
+    
+    
+    
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,7 +34,7 @@
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="./home.php">Logout</a>
+              <a class="navbar-brand" href="./logout.php">Logout</a>
               </div>
               <ul class="nav navbar-nav">
                 <li ><a href="./change.php">Change Professors</a></li>

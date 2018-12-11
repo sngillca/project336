@@ -37,6 +37,9 @@ function search(){
 //AJAX CALL
     var xhr = new XMLHttpRequest();
     
+    
+    //3rd party API: http://hp-api.herokuapp.com/api/characters
+    
     xhr.open('GET', "http://hp-api.herokuapp.com/api/characters", true);
     xhr.send();
     var html = "";
@@ -129,48 +132,4 @@ function search(){
 
 }//search()
 
-function login() {
-    
-    var userIn = document.getElementById("user").value;
-    var user = ""+userIn;
-    var passIn = document.getElementById("pass").value;
-    var pass = ""+passIn;
-    //console.log(user);
-    //console.log(pass);
-    
-    
-    var ajax = new XMLHttpRequest();
-    var method = "GET";
-    var url = "users.php";
-    var async = true;
-    
-    ajax.open(method, url, async);
-    ajax.send();
-    
-    ajax.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200){
-            var data = JSON.parse(this.responseText);
-            console.log(data);
-            var html = "";
-            var count = 0;
-            for(var i = 0; i < data.length; i++){
-                if(user == data[i].username && pass == data[i].password){
-                   // console.log("USER FOUND!!!");
-                    //window.location.href="./hidden.php";  
-                     window.open('./hidden.php', '_blank'); 
-                    count =1;
-                 
-                    
-                } 
-                if(count == 0 && i == data.length-1){
-                    alert("Please check login credentials.");
-                }
-            }
-        }//if
-        
-    };//ajax
-    
-    
-    
-}//function login()
 

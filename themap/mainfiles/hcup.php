@@ -1,8 +1,23 @@
 <?php
 
-    include "db.php";
+  
+    include 'functions.php';
+    checkLoggedIn(); 
+    session_start(); 
+    
+    
+    ?>
+    
+    
+    <?php
+    
+    
+    
+
+
+    
     $conn = getSQL();
-    $sql = "select * from houses full join housecup"; 
+    $sql = "SELECT * FROM houses Right Join housecup on houses.house_id=housecup.cup_id"; 
     $statement = $conn->prepare($sql); 
     $statement->execute(); 
     $records = $statement->fetchAll(); 
@@ -61,8 +76,32 @@
       
     }//foreach
   
-        
+      /*
+      SELECT * from housecup WHERE name="Gryffindor"
+SELECT wins/totalwins FROM housecup join (SELECT SUM(wins) from housecup)
+      */
       
+       // echo "<br>SQL;:".$sql;
+       
+       
+       $numOfqs;
+       
+       
+        $sql = "SELECT SUM(wins) FROM housecup";
+        $statement = $conn->prepare($sql); 
+        $statement->execute(); 
+        $records = $statement->fetchAll();
+        
+        
+       
+    
+     
+      foreach ($records as $record) {
+            //get quotes and authors
+           $numOfqs = $record[0];
+            
+        }//foreach 
+
     
 
 ?>
@@ -104,7 +143,7 @@
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="./home.php">Logout</a>
+            <a class="navbar-brand" href="./logout.php">Logout</a>
             </div>
             <ul class="nav navbar-nav">
               <li ><a href="./hidden.php">Main</a></li>
@@ -135,6 +174,12 @@
               <td>Total Wins in History: <?php echo "<kbd> ".$shist."</kbd>"; ?>  </td>
               <td>Total Wins in History:<?php echo "<kbd> ".$hhist."</kbd>"; ?></td>
               <td>Total Wins in History: <?php echo "<kbd> ".$rhist."</kbd>"; ?></td>
+            </tr>
+            <tr>
+              <td>Average Wins in History: </td>
+              <td>Average Wins in History:</td>
+              <td>Average Wins in History:</td>
+              <td>Average Wins in History:</td>
             </tr>
       </table>
       </kbd>

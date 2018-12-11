@@ -1,30 +1,55 @@
 <?php
+    session_start(); 
+    include 'db.php'; 
+    include 'menu.php';
+    $dbConn = getSQL(); 
 
+    function validate($username, $password) {
+        global $dbConn; 
+        $dbConn = getSQL(); 
+        
+        $sql = "SELECT * FROM `users` WHERE username=:username AND password=:password"; 
+        $statement = $dbConn->prepare($sql); 
+        $statement->execute(array(':username' => $username, ':password' => $password));
+    
+        $records = $statement->fetchAll(); 
+        
+        
+        if (count($records) >= 1) {
+            // login successful
+            $_SESSION['user_id'] = $records[0]['id']; 
+            $_SESSION['username'] = $records[0]['username']; 
+            header('Location: hidden.php');
+            
+        }  else {
+            echo "<div class='error'><kbd>Username and password are invalid</kbd> </div>"; 
+        }
+ }
+    
+    
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Login</title>
-        <style type="text/css">
-            
-        </style>
-        
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
-        <?php include "./menu.php"; ?>
-        <kbd><h1>Alohomora</h1></kbd>
+        <h1> <kbd>Alohomora</kbd></h1>
         
-        
-        <form method="post">
-            <kbd>USERNAME:</kbd> <input type="text" id="user"/>
-            <kbd>PASSWORD:</kbd> <input type="password" id="pass"/>
-            
-            <input  class="btn btn-default btn-lg" type="button" value="LOGIN" onClick="login()"/>
+        <?php 
+            if (isset($_POST['username'])) {
+                validate($_POST['username'], $_POST['password']);  
+            }
+        ?>
+
+        <form method="POST">
+            <kbd>Username:</kbd> <input id="username" type="text" name="username"></input> <span id="errorMsg"></span><br/>
+            <kbd>Password:</kbd> <input type="password" name="password"></input>
+            <input type="submit" value="Login">
         </form>
-        <kbd>TEST: username=nat password=cathat</kbd>
-        
-        <script type="text/javascript" src="./mapmain.js"></script>
+        <kbd>test with username=nat password=cathat</kbd>
     </body>
 </html>

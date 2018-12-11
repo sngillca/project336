@@ -1,3 +1,15 @@
+<?php
+    include 'functions.php';
+    //print_r($_SESSION);
+    checkLoggedIn(); 
+    
+    session_start(); 
+   
+    
+    
+    
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,7 +30,7 @@
           <nav class="navbar navbar-inverse">
               <div class="container-fluid">
                   <div class="navbar-header">
-                      <a class="navbar-brand" href="./home.php">Logout</a>
+                      <a class="navbar-brand" href="./logout.php">Logout</a>
                       </div>
                       <ul class="nav navbar-nav">
                           <li ><a href="./hidden.php">Main</a></li>
@@ -33,6 +45,8 @@
             <input type="text" name="prof"/>
             <h2><kbd>Enter Professor Name to Add:</kbd></h2>
             <h4><kbd> Name: </kbd><input type="text" name="add"/><kbd> Position</kbd> <input type="text" name="pos"/> 
+            <h2><kbd>Enter Professor Name & New Position to Edit:</kbd></h2>
+            <h4><kbd> Name: </kbd><input type="text" name="edit"/><kbd> Position</kbd> <input type="text" name="newpos"/> 
             <input  class="btn btn-default btn-lg" type="submit" value="Update Roster" />
             </form>
   
@@ -44,32 +58,10 @@
         $fire = $_POST["prof"];
         $add = $_POST["add"];
         $pos = $_POST["pos"];
-        include "db.php";
+        $edit = $_POST["edit"];
+        $newpos = $_POST["newpos"];
         $quotes = array();
         $conn = getSQL();
-        $sql = "SELECT * from quotes Right join professors on quotes.name=professors.position"; 
-        $statement = $conn->prepare($sql); 
-        $statement->execute(); 
-        $records = $statement->fetchAll(); 
-        $found = 0;
-        foreach ($records as $record) {
-            
-                //get quotes and authors
-            //echo "<kbd> ".$record["name"]."</kbd>";
-            $count = 1;
-            array_push($quotes,array($record["name"]=>$record["position"]));
-        }//foreach
-        
-       // echo "<kbd> ".$count."</kbd>";
-        foreach($quotes as $quote){
-            foreach($quote as $key=>$value){
-                echo "<br><h2><kbd>".$key."</kbd><kbd> - ".$value."</kbd></h2>";
-                if($key == $add){
-                        //echo "<h1><kbd>:".$add." key:".$key."</kbd></h1>s";
-                        $found =1;
-                    }//end found 
-                }//foreach
-           }//foreach
         
         
         if(isset($_POST["prof"])){
@@ -87,8 +79,42 @@
                 $statement->execute(); 
             
         }//end new prof
+        
+        
+        if( !(empty($edit)) && !(empty($newpos)) ){
+            $sql = "UPDATE professors SET position='".$newpos."' WHERE name='".$edit."'"; 
+            $statement = $conn->prepare($sql); 
+            $statement->execute(); 
+            
+        }//end edit prof 
+        
+        //JOIN RELATIONSHIP
+        $sql = "SELECT * from quotes Right join professors on quotes.name=professors.position"; 
+        $statement = $conn->prepare($sql); 
+        $statement->execute(); 
+        $records = $statement->fetchAll(); 
+        $found = 0;
+        foreach ($records as $record) {
+            
+                //get quotes and authors
+            //echo "<kbd> ".$record["name"]."</kbd>";
+            $count = 1;
+            array_push($quotes,array($record["name"]=>$record["position"]));
+        }//foreach
+        
+       // echo "<kbd> ".$count."</kbd>";
+       //foreach structure used from home page
+        foreach($quotes as $quote){
+            foreach($quote as $key=>$value){
+                echo "<br><h2><kbd>".$key."</kbd><kbd> - ".$value."</kbd></h2>";
+                if($key == $add){
+                        //echo "<h1><kbd>:".$add." key:".$key."</kbd></h1>s";
+                        $found =1;
+                    }//end found 
+                }//foreach
+           }//foreach
+        
 
-      
       
     
 ?>

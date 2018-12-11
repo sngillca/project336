@@ -32,9 +32,9 @@
             }//foreach
         }//foreach
         
-    
+        //1st report with aggregate function
         $sql = 'SELECT COUNT(`id`) FROM `quotes` WHERE `name`="'.$name.'"'; 
-        //echo "<br>SQL;:".$sql;
+       // echo "<br>SQL;:".$sql;
         $statement = $dbConn->prepare($sql); 
         $statement->execute(); 
         $records = $statement->fetchAll();
