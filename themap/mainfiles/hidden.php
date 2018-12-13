@@ -38,18 +38,18 @@
               </div>
               <ul class="nav navbar-nav">
                 <li ><a href="./change.php">Change Professors</a></li>
-                <li><a href="./hcup.php">House Cup</a></li>
+                <li><a href="./hogs.php">Hogwarts Data</a></li>
+                <li><a href="./owl.php">OWL Exam Data</a></li>
                 </ul>
           </div>
         </nav>
         <br><br>
-        <h1><kbd>Welcome! You have administrative access; you will now be able to add, remove, 
-        and edit professors at Hogwarts!</kbd></h1>
-        <h2><kbd>You will also be able to see data on the House Cup trophy -who has won it in the past, 
-        how many points the current house has, etc.
+        <h1><kbd>Welcome! You are now the Headmaster of Hogwarts. You will now be able to add, remove, 
+        and edit professors!</kbd></h1>
+        <h2><kbd>You will also be able to see data on Hogwart's, such as student statistics and OWL (Odrinary Wizarding Level) exam results.
         </kbd></h2>
         
-        <h1><kbd>Click 'Change Professors' to edit the roster, and click 'House Cup' to see the trophy data.</kbd></h1>
+        <h1><kbd>Click 'Change Professors' to edit the roster, and click 'Hogwarts Data' to see the statistics.</kbd></h1>
     </body>
 </html>
 

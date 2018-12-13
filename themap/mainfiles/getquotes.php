@@ -39,7 +39,7 @@
         $statement->execute(); 
         $records = $statement->fetchAll();
         
-        
+        //$sql = "SELECT * from quotes Inner join professors on quotes.name=professors.name"; 
        
     
      $numOfqs;
@@ -48,7 +48,7 @@
            $numOfqs = $record[0];
             
         }//foreach 
-        echo "<br><kbd> ".$name."</kbd><kbd><em> has ".$numOfqs." quotes in this system</em></kbd>";
+        echo "<br><kbd> ".$name."</kbd><kbd><em> has ".$numOfqs." quotes on The Marauder's Map</em></kbd>";
      }//displayQuotes
 
     displayQuotes();

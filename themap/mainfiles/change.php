@@ -5,9 +5,6 @@
     
     session_start(); 
    
-    
-    
-    
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +32,8 @@
                       <ul class="nav navbar-nav">
                           <li ><a href="./hidden.php">Main</a></li>
                           <li ><a href="./change.php">Change Professors</a></li>
-                          <li><a href="./hcup.php">House Cup</a></li>
+                          <li><a href="./hogs.php">Hogwarts Data</a></li>
+                          <li><a href="./owl.php">OWL Exam Data</a></li>
                           </ul>
                           </div>
           </nav>
@@ -80,11 +78,12 @@
             
         }//end new prof
         
-        
-        if( !(empty($edit)) && !(empty($newpos)) ){
+        $done = 0;
+        if( !(empty($edit)) && !(empty($newpos)) && $done == 0 ){
             $sql = "UPDATE professors SET position='".$newpos."' WHERE name='".$edit."'"; 
             $statement = $conn->prepare($sql); 
             $statement->execute(); 
+            $done =1;
             
         }//end edit prof 
         

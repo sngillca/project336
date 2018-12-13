@@ -40,7 +40,7 @@ function search(){
     
     //3rd party API: http://hp-api.herokuapp.com/api/characters
     
-    xhr.open('GET', "http://hp-api.herokuapp.com/api/characters", true);
+    xhr.open('GET', "https://hp-api.herokuapp.com/api/characters", true);
     xhr.send();
     var html = "";
     xhr.onreadystatechange = function() {
@@ -68,13 +68,13 @@ function search(){
                     html+="<br>";
                     
                     if(data[a].gender == "male"){
-                        html += "<br><h2><em><td><kbd>Wizard: <mark>"+data[a].name+"</mark> Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
+                        html += "<br><h2><em><kbd>Wizard: <mark>"+data[a].name+"</mark> Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2>";
                         var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                     }
                     if(data[a].gender == "female"){
                         
-                        html += "<br><h2><em><td><kbd>Witch: <mark>"+data[a].name+"</mark> Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
+                        html += "<br><h2><em><kbd>Witch: <mark>"+data[a].name+"</mark> Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2>";
                         var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                      }//end gender
@@ -85,13 +85,15 @@ function search(){
                     
                         count+=1;
                          if(data[a].gender == "male"){
-                        html += "<br><h2><em><td><kbd>Wizard: "+data[a].name+" Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong><mark>"+data[a].house+"</mark></strong></kbd></em></h2></td>";
+                             
+                             
+                        html += "<br><h2><em><kbd>Wizard: "+data[a].name+" Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong><mark>"+data[a].house+"</mark></strong></kbd></em></h2>";
                         var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                     }
                     if(data[a].gender == "female"){
                         
-                        html += "<br><h2><em><td><kbd>Witch:"+data[a].name+" Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong><mark>"+data[a].house+"</mark></strong></kbd></em></h2></td>";
+                        html += "<h2><em><kbd>Witch:"+data[a].name+" Patronus:<strong> "+data[a].patronus.toUpperCase()+"</strong> House: <strong><mark>"+data[a].house+"</mark></strong></kbd></em></h2>";
                         var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                      }//end gender
@@ -103,13 +105,13 @@ function search(){
                        
                         count+=1;
                          if(data[a].gender == "male"){
-                        html += "<br><h2><em><td><kbd>Wizard: "+data[a].name+" Patronus:<strong><mark> "+data[a].patronus.toUpperCase()+"</mark></strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
+                        html += "<br><h2><em><kbd>Wizard: "+data[a].name+" Patronus:<strong><mark> "+data[a].patronus.toUpperCase()+"</mark></strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2>";
                         var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                     }
                     if(data[a].gender == "female"){
                         
-                        html += "<br><h2><em><td><kbd>Witch:"+data[a].name+" Patronus:<strong><mark> "+data[a].patronus.toUpperCase()+"</mark></strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2></td>";
+                        html += "<br><h2><em><kbd>Witch:"+data[a].name+" Patronus:<strong><mark> "+data[a].patronus.toUpperCase()+"</mark></strong> House: <strong>"+data[a].house+"</strong></kbd></em></h2>";
                         var path = "../img/"+a+".jpg";
                         html += "<br><img src='"+path+"'  height='300' width='300'></img>";
                      }//end gender
@@ -118,15 +120,13 @@ function search(){
                 
                if(a == data.length-1 && count == 0){
                     
-                        html += "<br><h2><em><td><kbd>No Witch(es) or Wizard(s) found.</kbd></em></h2></td>";
+                        html += "<br><h2><em><kbd>No Witch(es) or Wizard(s) found.</kbd></em></h2>";
                      }//end not found
                
             }//for
             document.getElementById("myDIV").innerHTML = html;
         }//if 
-        else {
-            console.log("error");
-        }
+       
         
     };//function ajax
 
